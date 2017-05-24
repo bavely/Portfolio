@@ -1,5 +1,4 @@
-
-$(function() {
+$(document).ready(function() {
 
 	// Vars.
 		var	$window = $(window),
