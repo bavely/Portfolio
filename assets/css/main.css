@@ -34,7 +34,10 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
-
+	
+	p{
+		padding: 10px;
+	}
 	.tech {
 
 		text-align: left;
