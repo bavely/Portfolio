@@ -5,6 +5,15 @@
 
 
 /* Reset */
+	.LI-badge-container{
+		
+		margin: 10px;
+	}
+	.LI-view-profile{
+	position: relative;
+	right: 17px;
+	}
+
 	.contact {
 		margin-bottom: 0;
 	    text-align: center;
