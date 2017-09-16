@@ -25,21 +25,23 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html")
 });
 
-app.get("/emailme", function(req, res) {
-    console.log(req.query.email + " " + req.query.name + "  " + req.query.message);
+app.get("/api/emailme", function(req, res) {
+    console.log(req.body.email + " " + req.body.name + "  " + req.body.message);
     var mailOptions = {
         to: 'bavelysamyport@gmail.com',
-        subject: req.query.name,
-        html: `<p> Message :  ${req.query.message}  <br> Email :  ${req.query.email}</p>`,
+        subject: req.body.name,
+        html: `<p> Message :  ${req.body.message}  <br> Email :  ${req.body.email}</p>`,
     };
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {
             console.log(error);
+            res.json({ Messageerr: "Sorry, Message Not Sent." });
         } else {
             console.log('Email sent: ' + info.response);
+            res.json({ Messagepass: "Thank You For Contacting Me." });
         }
     });
-    res.redirect("/")
+
 })
 
 

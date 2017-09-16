@@ -349,14 +349,16 @@
                 <h1>Contact</h1>
             </header>
             <div class="row">
+
                 <div class="block-content text-center">
                     <div class="col-md-6">
                         <div data-aos="fade-down">
-                            <form class="contact-form" action="/emailme">
-                                <input type="text" name="name" placeholder="Name" required>
-                                <input type="email" name="email" placeholder="Email" required>
-                                <textarea rows="5" name="message" placeholder="Say Something..." required></textarea>
-                                <input type="submit" value="Submit">
+                            <form class="contact-form">
+                                <div id="message"></div>
+                                <input type="text" id="inname" placeholder="Name" required>
+                                <input type="email" id="inemail" placeholder="Email" required>
+                                <textarea rows="5" id="intext" placeholder="Say Something..." required></textarea>
+                                <input type="submit" value="Submit" id="sbtn">
                             </form>
                         </div>
                     </div>
