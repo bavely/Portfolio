@@ -25,12 +25,13 @@ app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html")
 });
 
-app.get("/api/emailme", function(req, res) {
-    console.log(req.body.email + " " + req.body.name + "  " + req.body.message);
+app.post("/api/emailme", function(req, res) {
+
+    console.log(req.body.email + " " + req.body.name + "  " + req.body.text);
     var mailOptions = {
         to: 'bavelysamyport@gmail.com',
         subject: req.body.name,
-        html: `<p> Message :  ${req.body.message}  <br> Email :  ${req.body.email}</p>`,
+        html: `<p> Message :  ${req.body.text}  <br> Email :  ${req.body.email}</p>`,
     };
     transporter.sendMail(mailOptions, function(error, info) {
         if (error) {

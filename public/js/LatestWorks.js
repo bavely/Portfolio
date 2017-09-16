@@ -71,13 +71,14 @@ $(document).ready(function() {
                 email: $("#inemail").val(),
                 text: $("#intext").val()
             }
-            $.get("/api/emailme", data).done(function(res) {
+            console.log(data)
+            $.post("/api/emailme", data).done(function(res) {
                 console.log(res);
                 if (res.Messagepass) { $("#message").html('<div class="alert alert-success" role="alert">' + res.Messagepass); } else if (res.Messageerr) { $("#message").html('<div class="alert alert-warning" role="alert">' + res.Messageerr); } else { $("#message").html('<div class="alert alert-danger" role="alert">' + "Something Is Wrong, Please Try Again."); }
 
             });
         } else {
-            $("#message").html('<div class="alert alert-danger" role="alert">' + "Please Fill Out All Fields");
+            $("#message").html('<div class="alert alert-danger" role="alert">' + "Please Fill Out All Fields.");
         }
 
     });
