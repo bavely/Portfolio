@@ -247,7 +247,7 @@ body {
     word-spacing: 2px;
     text-shadow: 2px 2px #1C2725;
     letter-spacing: 2px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-size: 21px;
 }
 
