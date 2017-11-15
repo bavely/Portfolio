@@ -161,7 +161,7 @@ Text Domain: developer
     
     .site-nav ul li a:hover,
     .site-nav ul li a:focus {
-        background-color: rgba(0, 255, 255, 0.58);
+        background-color: rgba(255, 255, 255, 0.58);
     }
     /*////////////////////////////////////////////////////////////////////////
 //  04 - Blur styles
@@ -867,9 +867,12 @@ Text Domain: developer
     }
     
     @media screen and (max-width: 640px) {
+        .skills {
+            height: 1650px;
+        }
         .skillscont {
-            width: 100%;
-            height: 1250px;
+            width: 250px;
+            height: 1290px;
             position: relative;
             bottom: 902px;
             right: 100px;
@@ -884,9 +887,15 @@ Text Domain: developer
             width: 100%;
             position: relative;
             bottom: 2000px;
+            margin-bottom: 300px;
+            clear: both;
         }
         .portfolio-item {
             position: relative;
             right: 10px;
+        }
+        #contact {
+            clear: both;
+            margin-top: 1100px;
         }
     }
