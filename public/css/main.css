@@ -866,6 +866,10 @@ Text Domain: developer
         margin-bottom: 10px;
     }
     
+    .row {
+        margin-right: 0px !important;
+    }
+    
     @media screen and (max-width: 640px) {
         .skills {
             height: 1650px;
@@ -881,7 +885,7 @@ Text Domain: developer
         }
         .content-block {
             height: 1200px;
-            width: 100%;
+            width: 104%;
         }
         .trythis #Works {
             width: 100%;
