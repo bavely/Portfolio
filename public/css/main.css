@@ -896,10 +896,23 @@ Text Domain: developer
         }
         .portfolio-item {
             position: relative;
-            right: 10px;
+            right: 70px;
         }
         #contact {
             clear: both;
             margin-top: 1100px;
+        }
+        #overlay-1 {
+            height: 1200px !important;
+        }
+        .middle {
+            padding-top: 10px;
+        }
+        #site-footer {
+            width: 104%;
+        }
+        .btn-hire {
+            position: relative;
+            bottom: 1500px;
         }
     }
