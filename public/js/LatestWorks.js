@@ -46,6 +46,12 @@ $(document).ready(function() {
             imgurl: "img/06.jpg",
             text: "Anime and Cartoons Stickers Search a web application allow user to search for Gifs and stickers.",
             tech: '<br> Technologies used in Anime and Cartoons Stickers Search : <br>Giphy Api, "AJAX", JQuery and Bootstrap.',
+        },
+        {
+            modaltitle: "s-badge.com",
+            imgurl: "img/15.PNG",
+            text: "s-badge.com is a website presents the products services provided by Global Net Solutions company.",
+            tech: "<br> Technologies used in s-badge.com : <br> Wordpress and PHP.",
         }
     ];
 
