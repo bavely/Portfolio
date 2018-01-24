@@ -4,10 +4,10 @@ var logger = require("morgan");
 var port = process.env.PORT || 8080;
 var app = express();
 // var nodemailer = require('nodemailer');
-var mailgun = require("mailgun-js");
-var api_key = 'key-ea4eaf7e61fbd658022867f6da600e4d';
-var DOMAIN = 'sandbox303563f49dd84965831af9ad1e53d741.mailgun.org';
-var mailgun = require('mailgun-js')({ apiKey: api_key, domain: DOMAIN });
+// var mailgun = require("mailgun-js");
+// var api_key = 'key-ea4eaf7e61fbd658022867f6da600e4d';
+// var DOMAIN = 'sandbox303563f49dd84965831af9ad1e53d741.mailgun.org';
+// var mailgun = require('mailgun-js')({ apiKey: api_key, domain: DOMAIN });
 
 
 app.use(logger("dev"));
@@ -47,23 +47,23 @@ app.post("/api/emailme", function(req, res) {
     //         res.json({ Messagepass: "Thank You For Contacting Me." });
     //     }
     // });
-    var data = {
-        from: req.body.email,
-        to: 'bavelysamyport@gmail.com',
-        subject: req.body.name,
-        text: req.body.text
-    };
+    // var data = {
+    //     from: req.body.email,
+    //     to: 'bavelysamyport@gmail.com',
+    //     subject: req.body.name,
+    //     text: req.body.text
+    // };
 
-    mailgun.messages().send(data, function(error, body) {
-        console.log(body);
-        if (error) {
-            console.log(error);
-            res.json({ Messageerr: "Sorry, Message Not Sent." });
-        } else {
-            console.log('Email sent: ' + info.response);
-            res.json({ Messagepass: "Thank You For Contacting Me." });
-        }
-    });
+    // mailgun.messages().send(data, function(error, body) {
+    //     console.log(body);
+    //     if (error) {
+    //         console.log(error);
+    //         res.json({ Messageerr: "Sorry, Message Not Sent." });
+    //     } else {
+    //         console.log('Email sent: ' + info.response);
+    //         res.json({ Messagepass: "Thank You For Contacting Me." });
+    //     }
+    // });
 
 })
 
