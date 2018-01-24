@@ -12,7 +12,9 @@
   "dependencies": {
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
+    "mailgun-js": "^0.14.2",
     "morgan": "^1.8.2",
-    "nodemailer": "^4.1.0"
+    "nodemailer": "^4.1.0",
+    "sendmail": "^1.2.0"
   }
 }
