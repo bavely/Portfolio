@@ -56,6 +56,13 @@ app.post("/api/emailme", function(req, res) {
 
     mailgun.messages().send(data, function(error, body) {
         console.log(body);
+        if (error) {
+            console.log(error);
+            res.json({ Messageerr: "Sorry, Message Not Sent." });
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.json({ Messagepass: "Thank You For Contacting Me." });
+        }
     });
 
 })
